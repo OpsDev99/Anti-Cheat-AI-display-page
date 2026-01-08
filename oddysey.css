@@ -1,0 +1,249 @@
+/* General page */
+body {
+  max-height: 150%;
+  max-width: 150%;
+  background-color: #f2f0ea;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  padding: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 1px 1px 1px 1px aqua;
+}
+
+/*Header */
+
+#header {
+  display: flex;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 2rem auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#header h1 {
+  background-color: rgb(38, 38, 226);
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+  text-align: center;
+}
+
+/*Links of page*/
+#links {
+  /* 1. Cambiamos a Grid */
+  display: flex;
+
+  /* 2. Centrado automático: reemplaza el margin-left: 15em */
+  margin: 2rem auto;
+
+  /* 3. Definimos las columnas (ejemplo: 3 links iguales) */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  /* 4. Alineación interna */
+  justify-items: center;
+  align-items: center;
+
+  /* Tu estilo visual */
+  width: 80%; /* 50% puede ser muy poco en laptops, 80% es más seguro */
+  max-width: 900px; /* Pero en monitores grandes, que no pase de 900px */
+  padding: 20px;
+  background-color: rgb(38, 38, 226);
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 1.5rem; /* Usar rem es mejor que px para accesibilidad */
+  color: white; /* Asumiendo que tus links son claros sobre fondo azul */
+}
+#links a {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+  margin-right: auto;
+  margin-left: auto;
+  width: 20%;
+}
+
+/*Searchbar*/
+#searchbar {
+  float: right;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 25px;
+  color: blue;
+  width: 10%;
+  font-size: 30px;
+}
+
+button {
+  position: relative;
+  bottom: 35px;
+}
+
+/*Plans page*/
+#plans-features {
+  width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#plan-container {
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  margin: 5rem auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#plan-standard {
+  margin-top: 120px;
+  margin-left: 100px;
+  background-color: #1a1a2e; /* Un azul oscuro más elegante */
+  width: 250px; /* Ancho suficiente para un plan */
+  height: auto; /* Altura flexible según el contenido */
+  padding: 40px;
+  border-radius: 15px; /* Bordes redondeados */
+  text-align: center; /* Centra el botón internamente */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+#standard-button {
+  background-color: #3f31ff; /* Verde neón suave para contraste */
+  color: #1a1a2e;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* El botón ocupa el ancho del plan */
+  transition: background 0.3s;
+  position: relative;
+  top: 5px;
+}
+
+#standard-button:hover {
+  background: linear-gradient(
+    45deg,
+    #1ed2ff 45%,
+    #ffc824 100%,
+    #e9f817 45%,
+    #004347 100%
+  );
+  background-size: 200% auto;
+  transition: 0.5s all;
+  transform: scale(1.05);
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+/* Contenedor Pro */
+#plan-pro {
+  margin-top: 120px; /* Separación del botón estándar */
+  margin-left: 300px;
+  background-color: #0f172a; /* Fondo oscuro tipo espacio profundo */
+  width: 250px; /* Un poco más ancho que el standard */
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px solid #d4af37; /* Borde dorado fino */
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2); /* Resplandor dorado */
+  text-align: center;
+}
+
+/* El Botón Dorado Metálico */
+#pro-button {
+  position: relative;
+  top: 1px;
+  width: 100%;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  color: #432c05; /* Marrón oscuro para que el texto sea legible */
+
+  /* Degradado efecto Oro (varios tonos de amarillo/bronce) */
+  background: linear-gradient(
+    45deg,
+    #bf953f 45%,
+    #fcf6ba 100%,
+    #b38728 45%,
+    #fbf5b7 100%
+  );
+  background-size: 200% auto; /* Necesario para la animación de brillo */
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+/* Efecto de Brillo y Movimiento */
+#pro-button:hover {
+  background-position: right center; /* Desplaza el degradado para que brille */
+  transform: scale(1.05); /* Se agranda ligeramente */
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); /* Brillo intenso */
+}
+
+/* Efecto al hacer clic */
+#pro-button:active {
+  transform: scale(0.98);
+}
+
+table {
+  margin-top: 5vh;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 50em;
+  border-style: solid;
+  border-color: red;
+  background-color: black;
+  color: white;
+}
+tr {
+  border-color: red;
+  border-style: solid;
+}
+th {
+  border-color: red;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/*Footer page*/
+#footer {
+  background-color: black;
+  display: flex;
+  margin-top: 20em;
+  height: 5em;
+  color: teal;
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px white;
+}
+
+#footer a {
+  display: inline-flex;
+  list-style-type: none;
+  margin: 50px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: aqua;
+}
+input {
+  width: 50px;
+  position: relative;
+  right: 100px;
+}
+@media screen and (max-width: 900vh) {
+  body {
+    width: 150%;
+    max-width: 100%;
+  }
+}
