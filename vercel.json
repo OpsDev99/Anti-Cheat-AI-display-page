@@ -1,18 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "oddysey.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "oddysey.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "oddysey.js",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [{ "src": "/(.*)", "dest": "/oddysey.html" }]
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/oddysey.html" }
+  ]
 }
+
